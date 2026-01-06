@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
-import bgvideo from "../assets/weatherbg.mp4";
+import "./weather.css";
 
 
 
@@ -21,7 +21,7 @@ function Weather() {
     setLoading(true);
     setError("");
 
-    
+
     try {
       const response = await axios.get(
         `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${API_KEY}&units=metric`
@@ -37,10 +37,10 @@ function Weather() {
 
   return (
     <div className="weather-wrapper">
-      {/* 🎥 Background Video */}
+      {/* 🎥 Background Video
       <video autoPlay muted loop className="bg-video">
         <source src={bgvideo} type="video/mp4" />
-      </video>
+      </video> */}
 
       {/* 🌫 Overlay */}
       <div className="overlay">
